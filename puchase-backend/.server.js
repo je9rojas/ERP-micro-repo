@@ -12,6 +12,10 @@ connectDB();
 // Middleware
 app.use(express.json());
 
+// Agregando cors
+const cors = require('cors');
+app.use(cors());
+
 // Rutas
 app.use('/api', purchaseRoutes);
 
