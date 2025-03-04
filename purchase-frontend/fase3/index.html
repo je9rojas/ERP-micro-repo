@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invoice Details</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <nav class="sidebar">
+        <header class="logo-container">
+          <div class="logo-wrapper">
+            <svg
+              width="141"
+              height="40"
+              viewBox="0 0 141 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="logo"
+              aria-label="Company Logo"
+            >
+              <rect
+                y="16"
+                width="7.99999"
+                height="7.99999"
+                fill="#1EB386"
+              ></rect>
+              <rect
+                x="24"
+                y="24"
+                width="8"
+                height="7.99999"
+                transform="rotate(180 24 24)"
+                fill="#1EB386"
+              ></rect>
+              <path
+                d="M8.00008 16L16.0001 7.99998V16L8.00008 24V16Z"
+                fill="#ADEDD2"
+              ></path>
+              <path
+                d="M16 24L7.99999 32L7.99999 24L16 16L16 24Z"
+                fill="#77DEB8"
+              ></path>
+              <path d="M0 16L16 0V7.99999L7.99999 16H0Z" fill="#77DEB8"></path>
+              <path
+                d="M24 24L7.99998 40L7.99998 32L16 24L24 24Z"
+                fill="#40C79A"
+              ></path>
+              <!-- Logo text paths -->
+            </svg>
+          </div>
+        </header>
+
+        <div class="nav-menu" role="navigation">
+          <a href="#" class="nav-item" aria-label="Dashboard">
+            <svg
+              class="nav-icon"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M3 5.5C3 4.11929 4.11929 3 5.5 3H8.5C9.88071 3 11 4.11929 11 5.5V8.5C11 9.88071 9.88071 11 8.5 11H5.5C4.11929 11 3 9.88071 3 8.5V5.5ZM5.5 5H8.5C8.77614 5 9 5.22386 9 5.5V8.5C9 8.77614 8.77614 9 8.5 9H5.5C5.22386 9 5 8.77614 5 8.5V5.5C5 5.22386 5.22386 5 5.5 5Z"
+                fill="currentColor"
+              />
+              <!-- Other dashboard icon paths -->
+            </svg>
+            <span>Dashboard</span>
+          </a>
+
+          <div class="nav-item active" aria-current="page">
+            <svg
+              class="nav-icon"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <!-- Billing icon paths -->
+            </svg>
+            <span>Billing</span>
+            <svg
+              class="chevron-icon"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M15.5893 13.0893C15.2638 13.4147 14.7362 13.4147 14.4107 13.0893L10 8.67851L5.58926 13.0893C5.26382 13.4147 4.73619 13.4147 4.41075 13.0893C4.08531 12.7638 4.08531 12.2362 4.41075 11.9107L9.70538 6.61612C9.8681 6.4534 10.1319 6.4534 10.2946 6.61612L15.5893 11.9107C15.9147 12.2362 15.9147 12.7638 15.5893 13.0893Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+
+          <nav class="nav-submenu" aria-label="Billing submenu">
+            <a href="#" class="submenu-item active" aria-current="page"
+              >Quotes & Invoices</a
+            >
+            <a href="#" class="submenu-item">Products & Services</a>
+            <a href="#" class="submenu-item">Clients</a>
+          </nav>
+
+          <!-- Management section -->
+          <a href="#" class="nav-item">
+            <svg
+              class="nav-icon"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <!-- Management icon paths -->
+            </svg>
+            <span>Management</span>
+            <svg
+              class="chevron-icon"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <!-- Chevron icon paths -->
+            </svg>
+          </a>
+
+          <!-- Development section -->
+          <a href="#" class="nav-item">
+            <svg
+              class="nav-icon"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <!-- Development icon paths -->
+            </svg>
+            <span>Development</span>
+            <svg
+              class="chevron-icon"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <!-- Chevron icon paths -->
+            </svg>
+          </a>
+
+          <div class="nav-bottom">
+            <a href="#" class="nav-item">
+              <svg
+                class="nav-icon"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <!-- My Advisor icon paths -->
+              </svg>
+              <span>My Advisor</span>
+            </a>
+
+            <a href="#" class="nav-item">
+              <svg
+                class="nav-icon"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <!-- Help Center icon paths -->
+              </svg>
+              <span>Help Center</span>
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      <main class="main-content">
+        <header class="header">
+          <div class="header-left">
+            <button class="back-button" aria-label="Go back">
+              <svg
+                class="back-icon"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <!-- Back icon paths -->
+              </svg>
+            </button>
+            <h1 class="header-title">Invoice Details</h1>
+          </div>
+
+          <div class="header-right">
+            <div class="header-icons">
+              <button class="icon-wrapper" aria-label="Messages">
+                <svg
+                  class="header-icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <!-- Message icon paths -->
+                </svg>
+              </button>
+              <button class="icon-wrapper" aria-label="Notifications">
+                <svg
+                  class="header-icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <!-- Notification icon paths -->
+                </svg>
+                <span class="notification-badge" aria-label="12 notifications"
+                  >12</span
+                >
+              </button>
+            </div>
+
+            <div class="user-profile">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/aa4d1397acce9d4111a34e153e9e17b093641400"
+                alt="Profile"
+                class="profile-image"
+              />
+              <div class="profile-info">
+                <span class="profile-name">Mike</span>
+                <span class="profile-id">732 829 320 00074</span>
+              </div>
+              <svg
+                class="chevron-icon"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <!-- Profile chevron icon paths -->
+              </svg>
+            </div>
+          </div>
+        </header>
+
+        <div class="content">
+          <header class="content-header">
+            <div>
+              <h2 class="invoice-title">Invoice #2020-05-0001</h2>
+              <p class="invoice-date">Paid on June 27, 2023</p>
+            </div>
+            <div class="header-actions">
+              <button class="more-options-btn">
+                <span>More Options</span>
+                <svg
+                  class="chevron-icon"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <!-- More options chevron icon paths -->
+                </svg>
+              </button>
+              <button class="record-payment-btn">Record a Payment</button>
+            </div>
+          </header>
+
+          <div class="invoice-container">
+            <section class="invoice-details">
+              <!-- Company Information -->
+              <div class="company-info">
+                <img src="" alt="Company Logo" class="company-logo" />
+                <div class="company-details">
+                  <h3 class="company-name">Sisyphus</h3>
+                  <p class="company-address">John Brandon</p>
+                  <p class="company-location">
+                    789/1 Sector-2c, 38200 Gandhinagar, France
+                  </p>
+                  <p class="company-contact">848172194 | contact@betao.se</p>
+                  <p class="company-siret">SIRET: 362 521 879 00034</p>
+                  <p class="company-vat">VAT: 842-484021</p>
+                </div>
+                <div class="invoice-number">
+                  <div class="number-badge">#2020-05-0001</div>
+                  <div class="total-amount">
+                    <span class="amount-label">Total Amount</span>
+                    <span class="amount-value">€3,030.00</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Invoice Body -->
+              <div class="invoice-body">
+                <!-- Invoice Information -->
+                <div class="invoice-info">
+                  <div class="info-section">
+                    <dl>
+                      <div class="info-row">
+                        <dt class="info-label">Bill Date</dt>
+                        <dd class="info-value">03/05/2020</dd>
+                      </div>
+                      <div class="info-row">
+                        <dt class="info-label">Delivery Date</dt>
+                        <dd class="info-value">03/05/2020</dd>
+                      </div>
+                      <div class="info-row">
+                        <dt class="info-label">Terms of Payment</dt>
+                        <dd class="info-value">Within 15 days</dd>
+                      </div>
+                      <div class="info-row">
+                        <dt class="info-label">Payment Deadline</dt>
+                        <dd class="info-value">05/18/2020</dd>
+                      </div>
+                    </dl>
+                  </div>
+
+                  <div class="billing-section">
+                    <div class="billing-address">
+                      <h4 class="section-label">Billing Address</h4>
+                      <p class="client-name">Willy Wonka</p>
+                      <p class="client-address">
+                        1445 West Norwood Avenue, Itasca, Illinois, USA
+                      </p>
+                      <p class="client-contact">97223041054 | om@om.com</p>
+                      <p class="client-siret">SIRET: 362 521 879 00034</p>
+                      <p class="client-vat">VAT: 842-484021</p>
+                    </div>
+
+                    <div class="note-section">
+                      <h4 class="note-label">Note</h4>
+                      <p class="note-text">
+                        This is a custom message that might be relevant to the
+                        customer. It can span up to three or four rows. It can
+                        span up to three or four rows.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Invoice Table -->
+                <div class="invoice-table">
+                  <div class="table-header" role="row">
+                    <div class="header-cellno" role="columnheader">NO.</div>
+                    <div class="header-cellarticle" role="columnheader">
+                      ARTICLE
+                    </div>
+                    <div class="header-cellquantity" role="columnheader">
+                      QUANTITY
+                    </div>
+                    <div class="header-cellunit-price" role="columnheader">
+                      UNIT PRICE
+                    </div>
+                    <div class="header-cellvat" role="columnheader">VAT</div>
+                    <div class="header-cellamount" role="columnheader">
+                      AMOUNT
+                    </div>
+                    <div class="header-cellfinal-amount" role="columnheader">
+                      FINAL AMOUNT
+                    </div>
+                  </div>
+
+                  <div class="table-rows">
+                    <!-- Table rows content -->
+                    <div class="table-row" role="row">
+                      <div class="cell" role="cell">1</div>
+                      <div class="cellproduct" role="cell">
+                        <input class="product_wrap" type="text" id="productw" name="productw" placeholder="Código" required>
+                        <input class="desc_wrap" type="text" id="productName" name="productName" placeholder="Descripción" required>
+                      </div>
+                      <div class="cellquantity" role="cell">
+                        <input class="quantity_wrap" type="number" id="quantityw" name="quantityw" placeholder="Cantidad" step="0.01" required>
+                        <div class="quantity-unit">Unidades</div>
+                      </div>
+                      <div class="cell" role="cell">€20</div>
+                      <div class="cell" role="cell">0%</div>
+                      <div class="cell" role="cell">€3,000</div>
+                      <div class="cell" role="cell">€3,000</div>
+                    </div>
+                    <!-- Additional rows... -->
+                  </div>
+
+                  <div class="table-summary">
+                    <div class="summary-row">
+                      <div class="summary-label">Total HT</div>
+                      <div class="summary-value">€3,000</div>
+                    </div>
+                    <div class="summary-row">
+                      <div class="summary-label">Total Disbursements</div>
+                      <div class="summary-value">€30</div>
+                    </div>
+                    <div class="summary-row">
+                      <div class="summary-label">Total VAT</div>
+                      <div class="summary-value">€0</div>
+                    </div>
+                    <div class="summary-row total">
+                      <div class="summary-label">Total Price</div>
+                      <div class="summary-value">€3,030.00</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="terms-conditions">
+                  <h4 class="terms-label">Terms & Conditions</h4>
+                  <p class="terms-text">
+                    Please pay within 15 days of receiving this invoice.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <aside class="invoice-sidebar">
+              <div class="late-notice" role="alert">
+                <svg
+                  class="late-icon"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <!-- Late notice icon paths -->
+                </svg>
+                <span>Late</span>
+              </div>
+
+              <div class="send-invoice">
+                <h3 class="send-title">Invoice not yet sent!</h3>
+                <button class="send-btn">
+                  <svg
+                    class="send-icon"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <!-- Send icon paths -->
+                  </svg>
+                  <span>Send Invoice</span>
+                </button>
+              </div>
+
+              <div class="summary-card">
+                <h3 class="summary-header">Summary</h3>
+                <div class="summary-total">
+                  <div class="total-label">Total</div>
+                  <div class="total-amount">€3,030 Incl. VAT</div>
+                </div>
+
+                <div class="payment-history">
+                  <!-- Payment history items -->
+                  <div class="payment-item">
+                    <div class="payment-dot"></div>
+                    <div class="payment-details">
+                      <h4 class="payment-title">Deposit No. 2020-04-0006</h4>
+                      <div class="payment-row">
+                        <div class="row-label">Date</div>
+                        <div class="row-value">Oct 24, 2019</div>
+                      </div>
+                      <div class="payment-row">
+                        <div class="row-label">Amount</div>
+                        <div class="row-value">€300</div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Additional payment items... -->
+
+                  <div class="remaining-amount">
+                    <div class="remaining-label">Remaining Amount</div>
+                    <div class="remaining-value">€100 Incl. VAT</div>
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
