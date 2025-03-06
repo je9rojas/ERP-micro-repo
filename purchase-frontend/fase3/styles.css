@@ -754,12 +754,15 @@ body {
   max-width: 70px; /* Máximo ancho permitido */
   min-width: 50px; /* Mínimo ancho permitido */
   text-align: center;
-  
-  /* Elimina los spinners en navegadores WebKit (Chrome, Safari, Edge) */
-  -webkit-appearance: none;
-  -moz-appearance: textfield; /* Para Firefox */
-  appearance: textfield; /* Propiedad estándar */
 }
+
+.price_wrap {
+  max-width: 60px; /* Máximo ancho permitido */
+  min-width: 40px; /* Mínimo ancho permitido */
+  text-align: center;
+}
+
+
 
 /*
 
@@ -772,3 +775,9 @@ form .productw input {
 }
 
 */
+
+  /* Elimina los spinners en navegadores WebKit (Chrome, Safari, Edge) 
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  */
